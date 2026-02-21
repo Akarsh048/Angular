@@ -1,0 +1,13 @@
+<section class="card">
+  <h2>Weather</h2>
+  <p class="hint">Fetch current weather from Open-Meteo.</p>
+  <p *ngIf="message" class="msg">{{ message }}</p>
+
+  <div class="row">
+    <input [(ngModel)]="weather.lat" type="number" placeholder="Latitude" />
+    <input [(ngModel)]="weather.lon" type="number" placeholder="Longitude" />
+    <button (click)="loadWeather()">Load weather</button>
+  </div>
+
+  <pre *ngIf="weather.data">{{ weather.data | json }}</pre>
+</section>

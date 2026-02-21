@@ -1,0 +1,16 @@
+<div class="shell">
+  <header class="topbar">
+    <div class="brand">{{ title }}</div>
+    <nav class="nav">
+      <a routerLink="/auth" routerLinkActive="active">Auth</a>
+      <a routerLink="/products" routerLinkActive="active">Products</a>
+      <a routerLink="/orders" routerLinkActive="active">Orders</a>
+      <a routerLink="/weather" routerLinkActive="active">Weather</a>
+    </nav>
+    <span class="status" [class.online]="isLoggedIn">{{ isLoggedIn ? 'Logged in' : 'Guest' }}</span>
+  </header>
+
+  <main class="content">
+    <router-outlet></router-outlet>
+  </main>
+</div>

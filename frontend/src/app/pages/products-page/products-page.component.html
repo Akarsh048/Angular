@@ -1,0 +1,37 @@
+<section class="card">
+  <h2>Products</h2>
+  <p class="hint">Create and manage product records.</p>
+  <p *ngIf="message" class="msg">{{ message }}</p>
+
+  <div class="row">
+    <input [(ngModel)]="productForm.name" placeholder="Product name" />
+    <input [(ngModel)]="productForm.price" type="number" placeholder="Price" />
+    <input [(ngModel)]="productForm.description" placeholder="Description" />
+    <button (click)="saveProduct()">{{ editingId ? 'Update' : 'Create' }}</button>
+    <button class="ghost" (click)="loadProducts()">Refresh</button>
+  </div>
+
+  <div class="table-wrap">
+    <table>
+      <thead>
+        <tr>
+          <th>Name</th>
+          <th>Price</th>
+          <th>Description</th>
+          <th>Actions</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let product of products">
+          <td>{{ product.name }}</td>
+          <td>{{ product.price | currency:'USD' }}</td>
+          <td>{{ product.description }}</td>
+          <td class="action-cell">
+            <button (click)="editProduct(product)">Edit</button>
+            <button class="danger" (click)="deleteProduct(product._id || '')">Delete</button>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</section>

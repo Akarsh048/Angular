@@ -1,0 +1,80 @@
+@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;700&display=swap');
+
+:host {
+  display: block;
+  min-height: 100vh;
+  background:
+    radial-gradient(circle at 12% 0%, #d6eadf, transparent 40%),
+    radial-gradient(circle at 88% 8%, #f7dfce, transparent 35%),
+    #eef1e8;
+  color: #203129;
+  font-family: 'Space Grotesk', sans-serif;
+}
+
+.shell {
+  max-width: 1140px;
+  margin: 0 auto;
+  padding: 16px;
+}
+
+.topbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 14px;
+  padding: 12px 14px;
+  border: 1px solid #c9d7cd;
+  border-radius: 14px;
+  background: rgba(253, 253, 248, 0.88);
+  backdrop-filter: blur(8px);
+}
+
+.brand {
+  font-size: 24px;
+  font-weight: 700;
+}
+
+.nav {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+
+.nav a {
+  text-decoration: none;
+  color: #203129;
+  border: 1px solid #c9d7cd;
+  border-radius: 999px;
+  padding: 8px 12px;
+  background: #fff;
+}
+
+.nav a.active {
+  background: #0f7b6c;
+  color: #fff;
+  border-color: transparent;
+}
+
+.status {
+  font-size: 13px;
+  border: 1px solid #c9d7cd;
+  border-radius: 999px;
+  padding: 6px 10px;
+  color: #5a6e64;
+}
+
+.status.online {
+  border-color: #0f7b6c;
+  color: #0f7b6c;
+}
+
+.content {
+  margin-top: 16px;
+}
+
+@media (max-width: 900px) {
+  .topbar {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}

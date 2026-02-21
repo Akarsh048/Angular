@@ -1,0 +1,27 @@
+<section class="card">
+  <h2>Authentication</h2>
+  <p class="hint">Create user account and sign in to use protected APIs.</p>
+
+  <p *ngIf="message" class="msg">{{ message }}</p>
+
+  <div class="grid">
+    <div class="panel">
+      <h3>Create account</h3>
+      <div class="row">
+        <input [(ngModel)]="registerForm.username" placeholder="Username" />
+        <input [(ngModel)]="registerForm.password" type="password" placeholder="Password" />
+        <button (click)="register()">Register</button>
+      </div>
+    </div>
+
+    <div class="panel">
+      <h3>Sign in</h3>
+      <div class="row">
+        <input [(ngModel)]="loginForm.username" placeholder="Username" />
+        <input [(ngModel)]="loginForm.password" type="password" placeholder="Password" />
+        <button (click)="login()">Login</button>
+        <button class="ghost" (click)="logout()">Logout</button>
+      </div>
+    </div>
+  </div>
+</section>

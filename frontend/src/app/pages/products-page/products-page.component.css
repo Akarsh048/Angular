@@ -1,0 +1,87 @@
+.card {
+  border: 1px solid #c9d7cd;
+  border-radius: 16px;
+  padding: 16px;
+  background: rgba(253, 253, 248, 0.92);
+}
+
+h2 {
+  margin: 0;
+}
+
+.hint {
+  margin: 8px 0 14px;
+  color: #5a6e64;
+}
+
+.msg {
+  margin: 0 0 12px;
+  background: #fff8d7;
+  border: 1px solid #f1dd91;
+  padding: 10px;
+  border-radius: 10px;
+}
+
+.row {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+
+input,
+button {
+  border-radius: 10px;
+  border: 1px solid #c9d7cd;
+  padding: 10px;
+  font: inherit;
+}
+
+input {
+  min-width: 180px;
+}
+
+button {
+  background: linear-gradient(135deg, #0f7b6c, #11a08a);
+  color: #fff;
+  border-color: transparent;
+  cursor: pointer;
+}
+
+button.ghost {
+  background: #fff;
+  color: #203129;
+  border-color: #c9d7cd;
+}
+
+button.danger {
+  background: linear-gradient(135deg, #b7313f, #d44857);
+}
+
+.table-wrap {
+  margin-top: 12px;
+  overflow-x: auto;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+th,
+td {
+  border-bottom: 1px solid #c9d7cd;
+  padding: 10px;
+  text-align: left;
+}
+
+.action-cell {
+  display: flex;
+  gap: 8px;
+}
+
+@media (max-width: 900px) {
+  input {
+    flex: 1 1 100%;
+    min-width: 0;
+  }
+}

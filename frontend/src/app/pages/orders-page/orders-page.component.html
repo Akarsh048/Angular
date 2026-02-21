@@ -1,0 +1,18 @@
+<section class="card">
+  <h2>Orders</h2>
+  <p class="hint">Create and retrieve order details.</p>
+  <p *ngIf="message" class="msg">{{ message }}</p>
+
+  <div class="row">
+    <input [(ngModel)]="orderForm.userId" type="number" placeholder="User ID" />
+    <input [(ngModel)]="orderForm.productIds" placeholder="Product IDs (comma separated)" />
+    <button (click)="createOrder()">Create order</button>
+  </div>
+
+  <div class="row second">
+    <input [(ngModel)]="orderIdInput" placeholder="Order ID" />
+    <button (click)="fetchOrder()">Fetch order</button>
+  </div>
+
+  <pre *ngIf="loadedOrder">{{ loadedOrder | json }}</pre>
+</section>
